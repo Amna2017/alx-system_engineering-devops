@@ -1,0 +1,2 @@
+#!/bin/bash
+shown --from=gui11aume betty hello
