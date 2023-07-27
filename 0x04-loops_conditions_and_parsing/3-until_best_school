@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# print Best school 10 times using until
+cc=0
+until [ $cc -gt 10 ]
+do
+echo "Best School"
+((cc++))
+done
