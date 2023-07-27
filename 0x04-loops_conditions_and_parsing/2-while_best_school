@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#to print Best School 10 times using while
+ff=1
+while [ $ff -le 10 ]
+do
+echo "Best School"
+((ff++))
+done
