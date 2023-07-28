@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Read the file line by line using a while loop
+while IFS=':' read -r username password uid gid info home shell; do
+    echo "Username: $username"
+    echo "User ID: $uid"
+    echo "Home Directory: $home"
+    echo "--------------------"
+done < /etc/passwd
