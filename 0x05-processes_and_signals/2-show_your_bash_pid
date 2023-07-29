@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# shellcheck disable=SC2009
+processes=$(ps -eo pid,cmd --no-headers)
+
+while IFS= read -r line; do
+  if [[ "$line" == *"bash"* ]]; then
+    echo "$line"
+  fi
+done <<< "$processes"
