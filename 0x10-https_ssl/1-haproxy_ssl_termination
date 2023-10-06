@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# my 1 task
+frontend www-https
+    bind *:443 ssl crt /etc/letsencrypt/live/www.example.com/fullchain.pem
+    reqadd X-Forwarded-Proto:\ https
+    default_backend web-servers
+
+backend web-servers
+    balance roundrobin
+    server web-01 web-01.example.com:80 check
+    server web-02 web-02.example.com:80 check
