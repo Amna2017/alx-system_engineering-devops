@@ -1,5 +1,6 @@
 import requests
 
+
 def number_of_subscribers(subreddit):
     # Set a custom User-Agent to avoid Too Many Requests error
     headers = {'User-Agent': 'YourApp/1.0'}
@@ -18,6 +19,7 @@ def number_of_subscribers(subreddit):
         # Invalid subreddit or other error
         return 0
 
+
 # Example usage:
 subreddit_name = 'learnpython'
 subscribers = number_of_subscribers(subreddit_name)
@@ -25,4 +27,3 @@ if subscribers > 0:
     print(f'The subreddit r/{subreddit_name} has {subscribers} subscribers.')
 else:
     print(f'The subreddit r/{subreddit_name} is not valid.')
-
